@@ -1,4 +1,4 @@
-export default parking = {
+exports.parks = {
   01: {
     id: 01,
     regNo: "KA53L7221",
