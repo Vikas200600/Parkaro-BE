@@ -1,0 +1,45 @@
+export default slots = {
+  01: {
+    id: 01,
+    lotName: "A1",
+    type: "2W",
+    available: true,
+    availableTime: "18:00",
+  },
+  02: {
+    id: 02,
+    lotName: "A2",
+    type: "2W",
+    available: true,
+    availableTime: "18:00",
+  },
+  03: {
+    id: 03,
+    lotName: "A3",
+    type: "2W",
+    available: true,
+    availableTime: "18:00",
+  },
+  04: {
+    id: 04,
+    lotName: "A3",
+    type: "4W",
+    available: true,
+    availableTime: "18:00",
+  },
+  05: {
+    id: 05,
+    lotName: "A3",
+    type: "4W",
+    available: true,
+    availableTime: "18:00",
+  },
+  06: {
+    id: 06,
+    lotName: "A3",
+    type: "4W",
+    available: true,
+    availableTime: "18:00",
+  },
+  keys: ["01", "02", "03", "04", "05", "06"],
+};
