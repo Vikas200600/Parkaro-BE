@@ -1,6 +1,6 @@
 exports.parks = {
-  01: {
-    id: 01,
+  1: {
+    id: 1,
     regNo: "KA53L7221",
     type: "2W",
     lotName: "A1",
@@ -8,8 +8,8 @@ exports.parks = {
     parkingOutStamp: "1640761527960",
     price: 20,
   },
-  02: {
-    id: 02,
+  2: {
+    id: 2,
     regNo: "KA53L7221",
     type: "2W",
     lotName: "A1",
@@ -17,8 +17,8 @@ exports.parks = {
     parkingOutStamp: "1640761527960",
     price: 20,
   },
-  03: {
-    id: 03,
+  3: {
+    id: 3,
     regNo: "KA53L7221",
     type: "2W",
     lotName: "A1",
@@ -26,8 +26,8 @@ exports.parks = {
     parkingOutStamp: "1640761527960",
     price: 20,
   },
-  04: {
-    id: 04,
+  4: {
+    id: 4,
     regNo: "KA53L7221",
     type: "2W",
     lotName: "A1",
@@ -35,5 +35,5 @@ exports.parks = {
     parkingOutStamp: "1640761527960",
     price: 20,
   },
-  keys: ["01", "02", "03", "04"],
+  keys: ["1", "2", "3", "4"],
 };
