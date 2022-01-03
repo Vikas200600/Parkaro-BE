@@ -2,32 +2,50 @@ const mockParks = require("../data/parkings");
 
 const lotController = require("./lotController");
 
-let parkData = mockParks.parks;
+const parkData = mockParks.parks;
 
-let getParks = (_req, res) => {
+const getParks = (_req, res) => {
   res.json({ status: "success", data: parkData });
 };
 
 let allotParking = (req, res) => {
   const { regNo, type, lotName, duration } = req.body;
-  let newId = (Math.max(...parkData["keys"]) + 1).toString();
-  let parkingInStamp = Date.now();
-  let parkingOutStamp = duration ? duration * 3600000 + parkingInStamp : null;
+  const newId =
+    parkData["keys"].length == 0
+      ? "1"
+      : (Math.max(...parkData["keys"]) + 1).toString();
+  const lotId = lotController.getLotId(lotName);
+  const parkingInStamp = Date.now();
+  const parkingOutStamp = duration ? duration * 3600000 + parkingInStamp : null;
   newParkDetails = {
     id: newId,
-    regNo: regNo,
-    type: type,
-    lotName: lotName,
-    parkingInStamp: parkingInStamp,
-    parkingOutStamp: parkingOutStamp,
+    lotId: lotId,
+    regNo,
+    type,
+    lotName,
+    parkingInStamp,
+    parkingOutStamp,
     price: null,
   };
   parkData.keys.push(newId);
   parkData[newId] = newParkDetails;
-  lotController.updateAvailability(lotName, parkingOutStamp);
+  lotController.updateAvailability(lotId, newId, regNo, parkingOutStamp);
+  res.json({ status: "success" });
+};
+
+let deallocateParking = (req, res) => {
+  const { id } = req.params;
+  let now = Date.now();
+  let timeLapsed = now - parkData[id].parkingInStamp;
+  let price = Math.ceil(timeLapsed / 3600000) * 20;
+  parkData[id].parkingOutStamp = now;
+  parkData[id].price = price;
+  lotController.updateLotStatus(parkData[id].lotId);
+  res.json({ status: "success" });
 };
 
 module.exports = {
   getParks: getParks,
   allotParking: allotParking,
+  deallocateParking: deallocateParking,
 };
