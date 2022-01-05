@@ -21,14 +21,11 @@ const getLotByType = (req, res) => {
 const addLot = (req, res) => {
   console.log(req.body);
   const { lotName, type } = req.body;
-<<<<<<< HEAD
   let newId =
     lotsData["keys"].length == 0
       ? "1"
       : (Math.max(...lotsData["keys"]) + 1).toString();
-=======
   let newId = (Math.max(...lotsData["keys"]) + 1).toString();
->>>>>>> 61c10603e2407616450ddcf0c82c6c02ac3410d6
   newLotDetails = {
     id: newId,
     parkingId: null,
