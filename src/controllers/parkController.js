@@ -10,10 +10,14 @@ const getParks = (_req, res) => {
 
 let allotParking = (req, res) => {
   const { regNo, type, lotName, duration } = req.body;
+<<<<<<< HEAD
   const newId =
     parkData["keys"].length == 0
       ? "1"
       : (Math.max(...parkData["keys"]) + 1).toString();
+=======
+  const newId = (Math.max(...parkData["keys"]) + 1).toString();
+>>>>>>> 61c10603e2407616450ddcf0c82c6c02ac3410d6
   const lotId = lotController.getLotId(lotName);
   const parkingInStamp = Date.now();
   const parkingOutStamp = duration ? duration * 3600000 + parkingInStamp : null;

@@ -21,10 +21,14 @@ const getLotByType = (req, res) => {
 const addLot = (req, res) => {
   console.log(req.body);
   const { lotName, type } = req.body;
+<<<<<<< HEAD
   let newId =
     lotsData["keys"].length == 0
       ? "1"
       : (Math.max(...lotsData["keys"]) + 1).toString();
+=======
+  let newId = (Math.max(...lotsData["keys"]) + 1).toString();
+>>>>>>> 61c10603e2407616450ddcf0c82c6c02ac3410d6
   newLotDetails = {
     id: newId,
     parkingId: null,
@@ -37,6 +41,37 @@ const addLot = (req, res) => {
   lotsData.keys.push(newId);
   lotsData[newId] = newLotDetails;
   res.json({ status: "success" });
+};
+
+const getOccupiedLots = (req, res) => {
+  let occupiedLots = [];
+  lotsData.keys.forEach((key) => {
+    lotsData[key].available == false &&
+      occupiedLots.push({
+        id: lotsData[key].parkingId,
+        option: lotsData[key].lotName,
+      });
+  });
+  res.json(occupiedLots);
+};
+
+const getParkedVehicles = (req, res) => {
+  let parkedVehicles = [];
+  lotsData.keys.forEach((key) => {
+    lotsData[key].available == false &&
+      parkedVehicles.push({
+        id: lotsData[key].parkingId,
+        option: lotsData[key].regNoParked,
+      });
+  });
+  res.json(parkedVehicles);
+};
+
+const updateLotStatus = (lotId) => {
+  lotsData[lotId].parkingId = null;
+  lotsData[lotId].available = true;
+  lotsData[lotId].availableTime = null;
+  lotsData[lotId].regNoParked = null;
 };
 
 const getOccupiedLots = (req, res) => {
