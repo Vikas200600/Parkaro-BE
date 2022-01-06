@@ -1,6 +1,5 @@
 exports.parks = {
   1: {
-<<<<<<< HEAD
     id: "1",
     lotId: "1",
     regNo: "KA03LA2312",
@@ -8,15 +7,6 @@ exports.parks = {
     lotName: "P1",
     parkingInStamp: 1641299052876,
     parkingOutStamp: 1641300649620,
-=======
-    id: 1,
-    lotId: 1,
-    regNo: "KA53L7221",
-    type: "2W",
-    lotName: "A1",
-    parkingInStamp: 1641197241395,
-    parkingOutStamp: null,
->>>>>>> 61c10603e2407616450ddcf0c82c6c02ac3410d6
     price: 20,
   },
   2: {
@@ -24,7 +14,6 @@ exports.parks = {
     lotId: "6",
     regNo: "KA53L7221",
     type: "2W",
-<<<<<<< HEAD
     lotName: "P6",
     parkingInStamp: 1641299105993,
     parkingOutStamp: null,
@@ -39,21 +28,6 @@ exports.parks = {
     parkingInStamp: 1641299164206,
     parkingOutStamp: 1641362932885,
     price: 360,
-=======
-    lotName: "A1",
-    parkingInStamp: 1640760936494,
-    parkingOutStamp: 1640761527960,
-    price: 20,
-  },
-  3: {
-    id: 3,
-    regNo: "KA53L7221",
-    type: "2W",
-    lotName: "A1",
-    parkingInStamp: 1640760936494,
-    parkingOutStamp: 1640761527960,
-    price: 20,
->>>>>>> 61c10603e2407616450ddcf0c82c6c02ac3410d6
   },
   4: {
     id: "4",
@@ -80,7 +54,6 @@ exports.parks = {
     lotId: "9",
     regNo: "KA33KL7665",
     type: "2W",
-<<<<<<< HEAD
     lotName: "P9",
     parkingInStamp: 1641300375109,
     parkingOutStamp: 1641300375112.6,
@@ -94,11 +67,6 @@ exports.parks = {
     lotName: "P10",
     parkingInStamp: 1641301014812,
     parkingOutStamp: 1641301020924,
-=======
-    lotName: "A1",
-    parkingInStamp: 1640760936494,
-    parkingOutStamp: 1640761527960,
->>>>>>> 61c10603e2407616450ddcf0c82c6c02ac3410d6
     price: 20,
   },
   8: {

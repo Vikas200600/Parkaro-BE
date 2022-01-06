@@ -25,7 +25,6 @@ const addLot = (req, res) => {
     lotsData["keys"].length == 0
       ? "1"
       : (Math.max(...lotsData["keys"]) + 1).toString();
-  let newId = (Math.max(...lotsData["keys"]) + 1).toString();
   newLotDetails = {
     id: newId,
     parkingId: null,
@@ -38,37 +37,6 @@ const addLot = (req, res) => {
   lotsData.keys.push(newId);
   lotsData[newId] = newLotDetails;
   res.json({ status: "success" });
-};
-
-const getOccupiedLots = (req, res) => {
-  let occupiedLots = [];
-  lotsData.keys.forEach((key) => {
-    lotsData[key].available == false &&
-      occupiedLots.push({
-        id: lotsData[key].parkingId,
-        option: lotsData[key].lotName,
-      });
-  });
-  res.json(occupiedLots);
-};
-
-const getParkedVehicles = (req, res) => {
-  let parkedVehicles = [];
-  lotsData.keys.forEach((key) => {
-    lotsData[key].available == false &&
-      parkedVehicles.push({
-        id: lotsData[key].parkingId,
-        option: lotsData[key].regNoParked,
-      });
-  });
-  res.json(parkedVehicles);
-};
-
-const updateLotStatus = (lotId) => {
-  lotsData[lotId].parkingId = null;
-  lotsData[lotId].available = true;
-  lotsData[lotId].availableTime = null;
-  lotsData[lotId].regNoParked = null;
 };
 
 const getOccupiedLots = (req, res) => {

@@ -1,6 +1,5 @@
 exports.lots = {
   1: {
-<<<<<<< HEAD
     id: "1",
     parkingId: null,
     lotName: "P1",
@@ -39,58 +38,15 @@ exports.lots = {
   5: {
     id: "5",
     parkingId: "9",
-=======
-    id: 1,
-    parkingId: 1,
-    lotName: "P1",
-    type: "2W",
-    available: false,
-    availableTime: null,
-    regNoParked: "KA53L7221",
-  },
-  2: {
-    id: 2,
-    lotName: "P2",
-    type: "2W",
-    available: false,
-    availableTime: 1640856777168,
-    regNoParked: "KA53L7255",
-  },
-  3: {
-    id: 3,
-    lotName: "P3",
-    type: "2W",
-    available: false,
-    availableTime: null,
-    regNoParked: "KA53L7451",
-  },
-  4: {
-    id: 4,
-    lotName: "P4",
-    type: "4W",
-    available: true,
-    availableTime: null,
-    regNoParked: "KA53L7541",
-  },
-  5: {
-    id: 5,
->>>>>>> 61c10603e2407616450ddcf0c82c6c02ac3410d6
     lotName: "P5",
     type: "4W",
     available: false,
     availableTime: null,
-<<<<<<< HEAD
     regNoParked: "KA33LL7665",
   },
   6: {
     id: "6",
     parkingId: "2",
-=======
-    regNoParked: "KA53L1121",
-  },
-  6: {
-    id: 6,
->>>>>>> 61c10603e2407616450ddcf0c82c6c02ac3410d6
     lotName: "P6",
     type: "2W",
     available: false,
@@ -104,11 +60,7 @@ exports.lots = {
     type: "2W",
     available: true,
     availableTime: null,
-<<<<<<< HEAD
     regNoParked: null,
-=======
-    regNoParked: "KA53L7121",
->>>>>>> 61c10603e2407616450ddcf0c82c6c02ac3410d6
   },
   8: {
     id: "8",
